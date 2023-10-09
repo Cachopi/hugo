@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/Cachopi/hugo.git'
+baseURL = 'https://cachopi.github.io/hugo/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme =['relearn']
