@@ -19,8 +19,8 @@
   {{- end }}
 {{- end }}
 {{- with $page }}
-<pre class="mermaid align-{{ $align }}{{ if $zoom }} zoom{{ end }}">
+<div class="mermaid align-{{ $align }}{{ if $zoom }} zoom{{ end }}">
   {{- replaceRE "&#39;" "'" ( replaceRE "&#34;" "\"" ( $content | safeHTML ) ) -}}
-</pre>
+</div>
 {{- .Store.Set "hasMermaid" true }}
 {{- end }}

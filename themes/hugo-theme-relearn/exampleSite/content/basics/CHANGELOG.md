@@ -1,45 +1,5 @@
 # Changelog
 
-## 5.22.1 (2023-10-02)
-
-### Enhancements
-
-- [**feature**] i18n: add Swahili translation [#666](https://github.com/McShelby/hugo-theme-relearn/issues/666)
-- [**feature**] math: hide unrendered math [#663](https://github.com/McShelby/hugo-theme-relearn/issues/663)
-- [**feature**] tabs: improve a11y by removing duplicate hidden title [#662](https://github.com/McShelby/hugo-theme-relearn/issues/662)
-- [**feature**] mermaid: improve zoom UX [#659](https://github.com/McShelby/hugo-theme-relearn/issues/659)
-
-### Fixes
-
-- [**bug**] variant: fix sidebar-flyout borders color for zen [#667](https://github.com/McShelby/hugo-theme-relearn/issues/667)
-- [**bug**] clipboard: fix RTL location of tooltip [#661](https://github.com/McShelby/hugo-theme-relearn/issues/661)
-- [**bug**] clipboard: ignore RTL for code [#660](https://github.com/McShelby/hugo-theme-relearn/issues/660)
-- [**bug**] expand: fix aria-controls [#658](https://github.com/McShelby/hugo-theme-relearn/issues/658)
-- [**bug**] theme: fix id generation for markdownified titles [#657](https://github.com/McShelby/hugo-theme-relearn/issues/657)
-- [**bug**] mermaid: avoid graph bombing on hugo --minify [#656](https://github.com/McShelby/hugo-theme-relearn/issues/656)
-- [**bug**] mermaid: fix width for some graphs [#655](https://github.com/McShelby/hugo-theme-relearn/issues/655)
-
----
-
-## 5.22.0 (2023-09-26)
-
-### Enhancements
-
-- [**feature**] mermaid: add pan&zoom reset [#651](https://github.com/McShelby/hugo-theme-relearn/issues/651)
-- [**feature**] markdown: add interlace color for tables [#648](https://github.com/McShelby/hugo-theme-relearn/issues/648)
-- [**feature**] search: add breadcrumb to dedicated search results [#647](https://github.com/McShelby/hugo-theme-relearn/issues/647)
-- [**feature**][**change**] menu: optionally disable index pages for sections [#642](https://github.com/McShelby/hugo-theme-relearn/issues/642)
-
-### Fixes
-
-- [**bug**] variants: restore generator zoom [#650](https://github.com/McShelby/hugo-theme-relearn/issues/650)
-- [**bug**] clipboard: malused Fontawesome style [#649](https://github.com/McShelby/hugo-theme-relearn/issues/649)
-- [**bug**][**change**] theme: avoid id collisions between headings and theme [#646](https://github.com/McShelby/hugo-theme-relearn/issues/646)
-- [**bug**] theme: remove HTML validation errors [#644](https://github.com/McShelby/hugo-theme-relearn/issues/644)
-- [**bug**] breadcrumb: remove superflous whitespace between items [#643](https://github.com/McShelby/hugo-theme-relearn/issues/643)
-
----
-
 ## 5.21.0 (2023-09-18)
 
 ### Enhancements

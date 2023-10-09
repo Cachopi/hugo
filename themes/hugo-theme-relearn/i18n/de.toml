@@ -19,12 +19,6 @@ other = "{1} Ergebnisse gefunden für \"{0}\""
 [Clear-History]
 other = "Verlauf löschen"
 
-[Reset-view]
-other = "Ansicht zurücksetzen"
-
-[View-reset]
-other = "Ansicht zurückgesetzt!"
-
 [Attachments-label]
 other = "Anhänge"
 

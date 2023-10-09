@@ -19,12 +19,6 @@ other = "{1} risultati trovati per \"{0}\""
 [Clear-History]
 other = "Reimposta storico"
 
-[Reset-view]
-other = "Azzeramento vista"
-
-[View-reset]
-other = "Vista azzerata!"
-
 [Attachments-label]
 other = "Allegati"
 

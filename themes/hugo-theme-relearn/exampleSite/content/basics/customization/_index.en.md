@@ -31,7 +31,7 @@ This theme defines the following partials :
 - `content-header.html`: header above the title, has a default implementation but you can overwrite it if you don't like it.
 - `content-footer.html`: footer below the content, has a default implementation but you can overwrite it if you don't like it.
 
-## Change the Logo
+## Change the logo
 
 Create a new file in `layouts/partials/` named `logo.html`. Then write any HTML you want.
 You could use an `img` HTML tag and reference an image created under the _static_ folder, or you could paste a SVG definition!
@@ -40,7 +40,7 @@ You could use an `img` HTML tag and reference an image created under the _static
 The size of the logo will adapt automatically
 {{% /notice %}}
 
-## Change the Favicon
+## Change the favicon
 
 If your favicon is a SVG, PNG or ICO, just drop off your image in your local `static/images/` folder and name it `favicon.svg`, `favicon.png` or `favicon.ico` respectively.
 
@@ -59,34 +59,13 @@ If you need to change this default behavior, create a new file in `layouts/parti
 <link rel="icon" href="/images/favicon.bmp" type="image/bmp">
 ```
 
-## Change the Menu Width
-
-The menu width adjusts automatically for different screen sizes.
-
-| Name | Screen Width  | Menu Width |
-| ---- | ------------- | ---------- |
-| S    | < 48rem       | 0          |
-| M    | 48rem - 60rem | 14.375rem  |
-| L    | >= 60rem      | 18.75rem   |
-
-The values for the screen width breakpoints aren't configurable.
-
-If you want to adjust the menu width you can define the following CSS variables in your `custom-header.html`. Note that `--MENU-WIDTH-S` doesn't exist as the menu is always hidden for small screen sizes.
-
-````css
-:root {
-    --MENU-WIDTH-M: 14.375rem;
-    --MENU-WIDTH-L: 18.75rem;
-}
-````
-
-## Change the Colors {#theme-variant}
+## Change the colors {#theme-variant}
 
 The Relearn theme lets you choose between some predefined color variants in light or dark mode, but feel free to add one yourself!
 
 You can preview the shipped variants by changing them in the variant selector at the bottom of the menu.
 
-### Single Variant
+### Single variant
 
 Set the `themeVariant` value with the name of your theme file. That's it!
 
@@ -97,7 +76,7 @@ Set the `themeVariant` value with the name of your theme file. That's it!
 
 In the above example your theme file has to be named `theme-relearn-light.css`
 
-### Multiple Variants
+### Multiple variants
 
 You can also set multiple variants. In this case, the first variant is the default chosen on first view and a variant switch will be shown in the menu footer.
 
@@ -146,10 +125,10 @@ document.addEventListener( 'themeVariantLoaded', function( e ){
 });
 ````
 
-### Roll your Own
+### Roll your own
 
 If you are not happy with the shipped variants you can either copy and rename one of the shipped files from `themes/hugo-theme-relearn/static/css` to `static/css`, edit them afterwards to your liking in a text editor and configure the `themeVariant` parameter in your `config.toml` or just use the [interactive variant generator]({{%relref "basics/generator" %}}).
 
-### Output Formats
+### Output formats
 
 Certain parts of the theme can be changed for support of your own [output formats](https://gohugo.io/templates/output-formats/). Eg. if you define a new output format `PLAINTEXT` in your `config.toml`, you can add a file `layouts/partials/header.plaintext.html` to change the way, the page header should look like for that output format.

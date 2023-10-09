@@ -24,7 +24,7 @@ code.copy-to-clipboard-code {
     border-end-end-radius: 2px;
     border-inline-end-width: 1px;
 }
-pre:not(.mermaid) {
+pre {
     border: 1px solid rgba( 204, 204, 204, 1 );
 }
 #R-body #R-topbar{
@@ -39,16 +39,12 @@ pre:not(.mermaid) {
     /* we don't need the buttons while printing */
     display: none;
 }
-@media screen and (max-width: 47.999rem) {
+@media screen and (max-width: 48rem) {
     #R-body .topbar-breadcrumbs {
         visibility: visible;
     }
 }
 #R-body .copy-to-clipboard-button {
-    display: none;
-}
-
-#R-body .svg-reset-button {
     display: none;
 }
 
@@ -67,7 +63,7 @@ pre:not(.mermaid) {
 #R-body .anchor{
     display: none;
 }
-#R-body pre:not(.mermaid),
+#R-body pre,
 #R-body code {
     background-color: rgba( 255, 255, 255, 1 );
     border-color: rgba( 221, 221, 221, 1 );
@@ -138,14 +134,16 @@ h1 + .footline{
 #R-body .topbar-sidebar-divider {
     border-width: 0;
 }
-.term-list {
+.tags {
     display: none;
 }
 mark {
     background: inherit;
     color: inherit;
 }
-.mermaid.zoom:hover {
+.mermaid > svg:hover,
+.mermaid > svg:active,
+.mermaid > svg:focus {
     border-color: transparent;
 }
 div.box > .box-content {
@@ -160,7 +158,7 @@ div.box > .box-content {
     border-bottom-color: rgba( 255, 255, 255, 1 );
     color: rgba( 0, 0, 0, 1 );
 }
-#R-body .tab-nav-button.active > .tab-nav-text {
+#R-body .tab-nav-button.active > * {
     background-color: rgba( 255, 255, 255, 1 );
 }
 #R-body .tab-content-text {

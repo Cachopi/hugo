@@ -3,7 +3,7 @@
   {{- $page = .context }}
   {{- warnf "%q: DEPRECATED parameter 'context' for shortcode 'tabs' found, use 'page' instead; see https://mcshelby.github.io/hugo-theme-relearn/basics/migration/#5180" $page.File.Path }}
 {{- end }}
-{{- $groupid := .groupid | default (partial "make-random-md5.hugo" $page) | plainify | anchorize }}
+{{- $groupid := .groupid | default (partial "make-random-md5.hugo" $page) | anchorize }}
 {{- $color := .color }}
 {{- $style := .style }}
 {{- $title := .title }}
@@ -17,13 +17,7 @@
   {{- with $tab }}
     {{- $color := .color | default $color | default "" }}
     {{- $style := .style | default $style | default (cond (ne $color "") "filled" "initial") }}
-    {{- $title := .title }}
-    {{- if not $title }}
-      {{- if eq $style "info" }}{{ $title = $style | T }}{{ end }}
-      {{- if eq $style "warning" }}{{ $title = $style | T }}{{ end }}
-      {{- if eq $style "note" }}{{ $title = $style | T }}{{ end }}
-      {{- if eq $style "tip" }}{{ $title = $style | T }}{{ end }}
-    {{- end }}
+    {{- $title := .title | default ($style | T) }}
     {{- $title = trim $title " " }}
     {{- $icon := .icon | default "" }}
     {{- if and (not $icon) (eq (len $icon) 0) }}
@@ -40,7 +34,7 @@
       "color"   $color
       "content" .content
       "icon"    $icon
-      "itemid"  (printf "%s%s" ($title | $page.RenderString | plainify | anchorize) ($icon | plainify | anchorize))
+      "itemid"  (printf "%s%s" ($title | $page.RenderString | anchorize) ($icon | anchorize))
       "style"   $style
       "title"   $title
     ) }}
@@ -48,13 +42,7 @@
 {{- end }}
 {{- $color = .color | default "" }}
 {{- $style = .style | default (cond (ne $color "") "filled" "initial") }}
-{{- $title = .title }}
-{{- if not $title }}
-  {{- if eq $style "info" }}{{ $title = $style | T }}{{ end }}
-  {{- if eq $style "warning" }}{{ $title = $style | T }}{{ end }}
-  {{- if eq $style "note" }}{{ $title = $style | T }}{{ end }}
-  {{- if eq $style "tip" }}{{ $title = $style | T }}{{ end }}
-{{- end }}
+{{- $title = .title | default ($style | T) }}
 {{- $title = trim $title " " }}
 {{- $icon = .icon | default "" }}
 {{- if and (not $icon) (eq (len $icon) 0) }}
@@ -77,7 +65,10 @@
       class="tab-nav-button tab-panel-style cstyle {{ .style }}{{ cond (eq $idx 0) " active" ""}}"{{ if .color }} style="--VARIABLE-BOX-color: {{ .color }};"{{ end }}
       onclick="switchTab('{{ $groupid }}','{{ .itemid }}')"
     >
-      <span class="tab-nav-text">{{ if .icon }}<i class="{{ .icon }}"></i>{{ end }}{{ if and .icon .title }} {{ end }}{{ .title | $page.RenderString }}{{ if (not .title) }}&#8203;{{ end }}</span>
+      <span>
+        <div class="tab-nav-hidden">{{ if .icon }}<i class="{{ .icon }}"></i>{{ end }}{{ if and .icon .title }} {{ end }}{{ .title | $page.RenderString }}{{ if (not .title) }}&#8203;{{ end }}</div>
+        <div class="tab-nav-text">{{ if .icon }}<i class="{{ .icon }}"></i>{{ end }}{{ if and .icon .title }} {{ end }}{{ .title | $page.RenderString }}{{ if (not .title) }}&#8203;{{ end }}</div>
+      </span>
     </button>
   {{- end }}
   </div>

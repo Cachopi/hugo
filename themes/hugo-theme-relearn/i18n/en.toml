@@ -19,12 +19,6 @@ other = "{1} results found for \"{0}\""
 [Clear-History]
 other = "Clear History"
 
-[Reset-view]
-other = "Reset view"
-
-[View-reset]
-other = "View reset!"
-
 [Attachments-label]
 other = "Attachments"
 
